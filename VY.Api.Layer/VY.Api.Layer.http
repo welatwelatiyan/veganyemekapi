@@ -1,0 +1,6 @@
+@VY.Api.Layer_HostAddress = http://localhost:5299
+
+GET {{VY.Api.Layer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
