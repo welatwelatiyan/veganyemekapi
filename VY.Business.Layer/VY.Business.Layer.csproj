@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Auth\Validasyon\**" />
+    <EmbeddedResource Remove="Auth\Validasyon\**" />
+    <None Remove="Auth\Validasyon\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -17,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Auth\Validasyon\" />
     <Folder Include="Store\" />
   </ItemGroup>
 

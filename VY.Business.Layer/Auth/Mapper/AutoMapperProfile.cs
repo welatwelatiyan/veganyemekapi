@@ -20,12 +20,8 @@ namespace VY.Business.Layer.Auth.Mapper
                 .ForMember(d => d.TaxBranchName, src => src.MapFrom(x => x.TaxBranchName))
                 .ForMember(d => d.StoreName, src => src.MapFrom(x => x.Name))
                 .ForMember(d => d.StoreDescription, src => src.MapFrom(x => x.Description))
-                .ForMember(d => d.IsOpenEndOfWeek, src => src.MapFrom(x => x.IsOpenEndOfWeek))
                 .ForMember(d => d.IsClosed, src => src.MapFrom(x => x.IsClosed))
-                .ForMember(d => d.Closedtime, src => src.MapFrom(x => new DateTime(new DateOnly(1900, 1, 1), x.Closedtime, DateTimeKind.Utc)))
-                .ForMember(d => d.ExceptionalClosed, src => src.MapFrom((x) => x.ExceptionalClosed))
-                .ForMember(d => d.IsClosed, src => src.MapFrom(x => x.IsClosed))
-                .ForMember(d => d.Opentime, src => src.MapFrom(x => new DateTime(new DateOnly(1900, 1, 1), x.Opentime, DateTimeKind.Utc)));
+                .ForMember(d => d.IsClosed, src => src.MapFrom(x => x.IsClosed));
 
             CreateMap<VyUserAdressTable, UserAdressGetDTO>()
                 .ForMember(d => d.AddressUUID, src => src.MapFrom(x => x.Id))

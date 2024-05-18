@@ -40,11 +40,7 @@ namespace VY.Business.Layer.Auth.Concreate
                     TaxBranchName = store.TaxBranchName,
                     TaxNumber = store.TaxNumber,
                     userId = userid,
-                    Closedtime = TimeOnly.FromDateTime(store.Closedtime.ToUniversalTime()) ,
-                    Opentime = TimeOnly.FromDateTime(store.Opentime.ToUniversalTime()),
-                    IsClosed =true,
-                    IsOpenEndOfWeek = store.IsOpenEndOfWeek,
-                    ExceptionalClosed = store.ExceptionalClosed
+                    IsClosed =true
                 });
 
                 if (!storeIsAdded)
@@ -106,10 +102,6 @@ namespace VY.Business.Layer.Auth.Concreate
                 vyStores[0].Description = store.StoreDescription;
                 vyStores[0].Name = store.StoreName;
                 vyStores[0].UpdateTime= DateTime.UtcNow;
-                vyStores[0].Closedtime = TimeOnly.FromDateTime(store.Closedtime);
-                vyStores[0].Opentime = TimeOnly.FromDateTime(store.Opentime);
-                vyStores[0].ExceptionalClosed = store.ExceptionalClosed;
-                vyStores[0].IsOpenEndOfWeek = store.IsOpenEndOfWeek;
                 //vyStores[0].UpdateTime = store.Closedtime;
                 //vyStores[0].Closedtime = store.Closedtime;
 

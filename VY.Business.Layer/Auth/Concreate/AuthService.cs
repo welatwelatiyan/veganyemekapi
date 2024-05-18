@@ -1,9 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Win32;
-using Newtonsoft.Json;
-using System.Data;
 using System.Security.Claims;
-using System.Security.Cryptography;
 using VY.Business.Layer.Auth.Abstarct;
 using VY.Business.Layer.Auth.DTO;
 using VY.Business.Layer.Auth.Static.Auth;
